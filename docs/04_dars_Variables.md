@@ -9,7 +9,7 @@ Quyida ma'lumot turlarining umumiy xotiradan oladigan joylari haqida gaplashamiz
 Ma'lumot turi,Hajmi (Bayt),Izoh\
 **int** (0),24 - 28 bayt,Son kattalashgan sari hajm ortadi (chegara yo'q).\
 **float**,24 bayt,O'nlik kasr sonlar uchun standart hajm.\
-**bool**,24 - 28 bayt,True yoki False (aslida 1 va 0 integerlari). **str** (matn),49 - 50 bayt,+1 bayt (ASCII) yoki +2/4 (Unicode).
+**bool**,24 - 28 bayt,True yoki False (aslida 1 va 0 integerlari). **str** (matn),49 - 50 bayt,+1 bayt [(ASCII)](https://www.ascii-code.com/) yoki +2/4 [(Unicode)](https://home.unicode.org/).
 
 Ma'lumot turi,Boshlang'ich (bo'sh),Har bir qo'shimcha element uchun
 
@@ -68,7 +68,7 @@ O'zgaruvchi nomida bo'shliq (пробел) bo'lishi mumkin emas
 
 O'zgaruvchi nomida katta-kichik harflar turlicha talqin qilinadi (ism, ISM, va Ism uchta turli o'zgaruvchi)
 
-**Eslatma** o'zgaruvchiga nom berishda kichik harflardan foydalaning agar nom ikki va undan ortiq so'z bo'lsa unda orasida ( ) bo'sh joy qoldirmang (\_) pastki chizidan foydalaning va iloji boricha o'zgaruvchiga tushunarli nom bering adashib ketmasligingiz uchun fogydali bu **Diqqat** o'zgaruvchiga bermalsik kerak bo'lgan so'zlar mavjud
+**Eslatma** o'zgaruvchiga nom berishda kichik harflardan foydalaning agar nom ikki va undan ortiq so'z bo'lsa unda orasida ( ) bo'sh joy qoldirmang (\_) pastki chizidan foydalaning va iloji boricha o'zgaruvchiga tushunarli nom bering adashib ketmasligingiz uchun foydali bu **Diqqat** o'zgaruvchiga bermaslik kerak bo'lgan so'zlar mavjud
 
 ![image.png](../.gitbook/assets/image.png)
 
