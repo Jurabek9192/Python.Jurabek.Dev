@@ -1,5 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [Qiqacha](README.md)
 
 ## Mundarija
+## [O'rnatish](docs/01_installing.md)
