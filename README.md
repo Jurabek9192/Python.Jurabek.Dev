@@ -1,4 +1,3 @@
-# Table of contents
+# README
 
-*[Kirish](README.md)
-*[O'rnatish](docs/01_installing.md)
+\*[Kirish](./) \*[Asosiy bo'lim](docs/first_page.md)
