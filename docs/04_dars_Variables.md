@@ -18,7 +18,7 @@ _tuple_,40 bayt,+8 bayt (o'zgarmas bo'lgani uchun listdan kichik).\
 _set_ (to'plam),216 bayt,Xesh-jadval ishlatgani uchun katta joy oladi.\
 _dict_ (lug'at),232 bayt,Eng ko'p xotira talab qiladigan tur.\
 _noneType_,16 bayt,Bo'sh qiymat (None).\
-_complex_,32 bayt,Kompleks sonlar (a+bj).\
+_complex_,32 bayt,Kompleks sonlar (a+bj).
 
 ```python
 print("Assalamu alekum")
