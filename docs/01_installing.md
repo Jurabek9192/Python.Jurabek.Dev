@@ -5,7 +5,7 @@ Ushbu bo'limda Python tilini o'rganish uchun kerak bo'ladigan dasturlarni o'rnat
 Kod yozish uchun kompyuterimizga Python o'rnatilgan bo'lishi kerak.
 Buning uchun biz [PYTHON](https://www.python.org/) satyiga kiramiz va u yerda quyidagi rasmlardagidek dasturni o'rnatib olamiz.
 
-![2026-02-19_12-04-33.png](01_installing_files/2026-02-19_12-04-33.png)
+![2026-02-19_12-04-33.png](01_installing/2026-02-19_12-04-33.png)
 
 Bunday qilishimizning asosiy sababi biz siz o'rganuvchi keyinchalik yana boshqa dasturlash tillarini o'rganishingizga qulay bo'lishini istadik va bunda biz ko'plab tillarni o'rganish va kod yozish uchun qulay bo'lgan dastur **vs code** yani visual studio code dasturini tanladik. 
 Ammo agar sizda daasturni o'rnatish bilan bog'liq muammo bo'ladigan bo'lsa unda online [Replit.com](https://replit.com/~) saytidan ham kodlar yozish uchun foydalanishingiz mumkin.
@@ -54,4 +54,5 @@ Barcha dasturchilarning an'anasiga sodiq qolgan va o'zbek ekanimizni inobatga ol
 Agar sizda hammasi to'g'ri o'rnatilgan bo'lsa unda quyidagi natija chiqishi kerak va tabriklayman sizda bu o'xshagan bo'lsa.
 
 ![2026-02-19_12-11-43.png](01_installing/2026-02-19_12-11-43.png)
+
 
