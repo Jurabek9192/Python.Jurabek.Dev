@@ -13,12 +13,12 @@ Ma'lumot turi,Hajmi (Bayt),Izoh\
 
 Ma'lumot turi,Boshlang'ich (bo'sh),Har bir qo'shimcha element uchun
 
-_list_ (ro'yxat),56 bayt,+8 bayt (har bir element manzili uchun).\
-&#xNAN;_&#x74;uple_,40 bayt,+8 bayt (o'zgarmas bo'lgani uchun listdan kichik).\
-&#xNAN;_&#x73;et_ (to'plam),216 bayt,Xesh-jadval ishlatgani uchun katta joy oladi.\
-&#xNAN;_&#x64;ict_ (lug'at),232 bayt,Eng ko'p xotira talab qiladigan tur.\
-&#xNAN;_&#x4E;oneType_,16 bayt,Bo'sh qiymat (None).\
-&#xNAN;_&#x63;omplex_,32 bayt,Kompleks sonlar (a+bj).
+_list_ (ro'yxat),56 bayt,+8 bayt (har bir element manzili uchun).
+_tuple_,40 bayt,+8 bayt (o'zgarmas bo'lgani uchun listdan kichik).
+_set_ (to'plam),216 bayt,Xesh-jadval ishlatgani uchun katta joy oladi.
+_dict_ (lug'at),232 bayt,Eng ko'p xotira talab qiladigan tur.
+_noneType_,16 bayt,Bo'sh qiymat (None).
+_complex_,32 bayt,Kompleks sonlar (a+bj).
 
 ```python
 print("Assalamu alekum")
