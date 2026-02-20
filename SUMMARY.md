@@ -3,4 +3,4 @@
 * [Qiqacha](README.md)
 
 ## Mundarija
-## [O'rnatish](docs/01_installing.md)
+*[O'rnatish](docs/01_installing.md)
