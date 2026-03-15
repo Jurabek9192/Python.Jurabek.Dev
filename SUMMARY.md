@@ -7,3 +7,5 @@
 * [O'zgaruvchilar](docs/04_dars_Variables.md)
 * [String](docs/05_string_va_unicode.md)
 * [int_f_string](docs/int_f_string.md)
+* [Float Typecasting](docs/06_float_typecasting.md)
+* [IF-ELSE](cods/10_if_else.md)
