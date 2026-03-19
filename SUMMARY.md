@@ -9,3 +9,4 @@
 * [INT F-STRING](docs/int_f_string.md)
 * [FLOAT TYPECASTING](docs/06_float_typecasting.md)
 * [IF-ELSE](docs/10_if_else.md)
+* [SHARTLAR BILAN ISHLASH](docs/shartlar_bilan_ishlash.md)
