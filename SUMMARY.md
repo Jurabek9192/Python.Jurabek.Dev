@@ -11,3 +11,4 @@
 * [IF-ELSE](docs/10_if_else.md)
 * [SHARTLAR BILAN ISHLASH](docs/shartlar_bilan_ishlash.md)
 * [XATOLAR](docs/xatolar.md)
+* [SWITCH CASE](docs/switch_case.md)
