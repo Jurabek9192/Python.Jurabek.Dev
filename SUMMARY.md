@@ -12,3 +12,4 @@
 * [SHARTLAR BILAN ISHLASH](docs/shartlar_bilan_ishlash.md)
 * [XATOLAR](docs/xatolar.md)
 * [SWITCH CASE](docs/switch_case.md)
+* [RO'YXAT](docs/07_list.md)
