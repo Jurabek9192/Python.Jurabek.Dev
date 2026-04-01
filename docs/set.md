@@ -44,7 +44,7 @@ print(raqamlar) # {1, 3, 4, 5, 6, 7}
 #### To'plamlar ustida matematik amallar
 Setning eng kuchli tomoni — ikki to'plamni solishtirishdir.
 
-![1.jpg](set_files/1.jpg)
+![1.jpg](set/1.jpg)
 
 | Amal nomi | Belgisi / Metodi | Vazifasi |
 | :--- | :--- | :--- |
