@@ -15,3 +15,4 @@
 * [RO'YXAT](docs/07_list.md)
 * [RO'YXATLAR BILAN ISHLASH](docs/08_listlar_bilan_ishlash.md)
 * [SET](docs/set.md)
+* [FOR_TAKRORLASH](docs/09_for_takrorlash.md)
