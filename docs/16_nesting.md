@@ -264,7 +264,7 @@ for ism, tillar in dasturchilar.items():
     Shahlo quyidagi tillarni biladi:
     C++  C#  
 
-#### LUG'AT ISHIDA LUG'AT 
+#### LUG'AT ICHIDA LUG'AT 
 
 Bunday qilish tavsiya qilinmaydi ammo istisno holatlarda lug'at ichida lug'at qiymatlarni lug'at ko'rinishida saqlash mumkin. Misol uchun ish joyingizdagi hamkasblaringiz haqidagi ma'lumotlarni saqlashda, hamkasbingizning ismi kalit u haqidagi ma'lumootlarni esa lug'at ko'rinishida berlishi mumkin.
 
