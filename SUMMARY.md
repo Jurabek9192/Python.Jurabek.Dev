@@ -25,5 +25,5 @@
 * [FUNCTION AND LIST](docs/21_function_and_list.md)
 * [ADAPTABLE FUNCTION](docs/22_adaptable_function.md)
 * [MODULES](docs/23_modules.md)
-* [FUNCTION](docs/24_function_final.md)
+* [FUNCTION](docs/24_functions_final.md)
 * [FILES](doc/33_files.md)
