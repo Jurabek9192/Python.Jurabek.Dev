@@ -200,4 +200,65 @@ print(mashina)
 ```
 
     None
-    
+
+
+#### Topshiriqlar
+1. Lug'at yaratish
+Topshiriq: Kalitlari ism, qiymatlari esa yoshi bo'lgan uchta elementdan iborat lug'at yarating va uni ekranga chiqaring.
+
+2. Lug'at elementiga murojaat qilish
+Topshiriq: Berilgan student = {"name": "Ali", "age": 20, "major": "Informatika"} lug'atidan talabaning mutaxassisligini (major) ekranga chiqaring.
+
+3. get() metodidan foydalanish
+Topshiriq: Yuqoridagi student lug'atidan .get() metodi yordamida mavjud bo'lmagan "gpa" kalitini chaqiring va xatolik chiqmasligi uchun standart qiymat sifatida 0.0 ni bering.
+
+4. Yangi kalit-qiymat qo'shish
+Topshiriq: car = {"brand": "Toyota", "model": "Corolla"} lug'atiga "year": 2022 kalit-qiymat juftligini qo'shing.
+
+5. Qiymatni yangilash
+Topshiriq: car lug'atidagi "year" qiymatini 2024 yilga o'zgartiring.
+
+6. update() metodi yordamida yangilash
+Topshiriq: user = {"username": "javohir", "status": "active"} lug'atiga {"status": "banned", "role": "admin"} lug'atini update() metodi yordamida birlashtiring.
+
+7. Elementni o'chirish (pop)
+Topshiriq: product = {"id": 101, "name": "Laptop", "price": 1200} lug'atidan pop() metodi yordamida "price" kalitini o'chiring va o'chirilgan qiymatni saqlab qo'ying.
+
+8. Oxirgi qo'shilgan elementni o'chirish (popitem)
+Topshiriq: settings = {"theme": "dark", "notifications": True, "sound": False} lug'atidan .popitem() yordamida oxirgi qo'shilgan elementni sug'urib oling.
+
+9. Kalitlarni olish (keys)
+Topshiriq: student lug'atidagi barcha kalitlarni .keys() metodi yordamida alohida ro'yxat yoki ko'rinishda oling.
+
+10. Qiymatlarni olish (values)
+Topshiriq: student lug'atidagi barcha qiymatlarni .values() metodi yordamida ekranga chiqaring.
+
+11. Juftliklarni olish (items)
+Topshiriq: student lug'atining barcha kalit va qiymat juftliklarini .items() yordamida iteratsiya qilib chiqaring.
+
+12. Kalit mavjudligini tekshirish
+Topshiriq: inventory = {"apple": 10, "banana": 5} lug'atida "apple" kaliti mavjudligini in operatori yordamida tekshiring.
+
+13. Lug'atni tozalash (clear)
+Topshiriq: data = {1: "a", 2: "b"} lug'atini clear() metodi yordamida to'liq tozalang.
+
+14. Lug'atdan nusxa olish (copy)
+Topshiriq: original = {"a": 1, "b": 2} lug'atining nusxasini copy_dict ga oling va asl lug'atga ta'sir qilmagan holda nusxaga o'zgartirish kiriting.
+
+15. setdefault() metodidan foydalanish
+Topshiriq: scores = {"math": 90} lug'atiga .setdefault("physics", 85) yordamida yangi qiymat qo'shing va mavjud bo'lgan "math" kalitiga boshqa qiymat berib nima bo'lishini kuzating.
+
+16. fromkeys() yordamida lug'at yaratish
+Topshiriq: keys = ["a", "b", "c"] ro'yxatidan foydalanib, barcha qiymatlari 0 bo'lgan yangi lug'at yarating (dict.fromkeys()).
+
+17. Lug'at uzunligini aniqlash (len)
+Topshiriq: Istalgan 4 ta elementdan iborat lug'at tuzing va uning uzunligini len() yordamida aniqlang.
+
+18. Lug'atni sikl (for) orqali aylanish
+Topshiriq: Berilgan prices = {"apple": 2, "banana": 3, "cherry": 5} lug'atidagi barcha kalit va qiymatlarni for sikli yordamida chiqaruvchi kod yozing.
+
+19. Dictionary Comprehension (Lug'atni qisqa yaratish)
+Topshiriq: 1 dan 5 gacha bo'lgan sonlar va ularning kvadratlaridan iborat lug'atni dictionary comprehension yordamida hosil qiling.
+
+20. Ichma-ich lug'at (Nested Dictionary)
+Topshiriq: Ikki xil talabaning ma'lumotlarini o'z ichiga olgan ichma-ich lug'at (nested dictionary) tuzing va ichki lug'atdagi qiymatga murojaat qilib ko'ring.
