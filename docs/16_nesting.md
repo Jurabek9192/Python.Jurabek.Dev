@@ -340,3 +340,36 @@ for ism, info in hamkasblar.items():
 
 
 Lug'at ichidagi lug'atlar bir hil tuzilishga ega bo'lgani ishingizni ancha yengillashtiradi, aks holda kodingiz murakkablashib ketishi mumkin.
+
+
+#### Topshiriqlar
+
+1. Ichma-ich lug'at yaratish (Nested Dictionary)
+Topshiriq: students nomli lug'at yarating. Unda ikkita talabaning ismi kalit sifatida kelsin, qiymati esa ularning yoshi va kursi ko'rsatilgan ichki lug'atlardan iborat bo'lsin.
+
+2. Ichma-ich lug'at elementiga murojaat qilish
+Topshiriq: Berilgan school = {"class_a": {"teacher": "Anvar", "students_count": 25}, "class_b": {"teacher": "Dilshod", "students_count": 22}} lug'atidan class_a ning o'qituvchisi (teacher) nomini ekranga chiqaring.
+
+3. Ichma-ich lug'atga yangi element qo'shish
+Topshiriq: Yuqoridagi school lug'atidagi class_b ichki lug'atiga "room": 405 kalit-qiymat juftligini qo'shing.
+
+4. Lug'at ichidagi ro'yxat (Dictionary with a List)
+Topshiriq: programmer = {"name": "Zafar", "skills": ["Python", "SQL", "Docker"], "experience": 3} lug'atidan foydalanib, dasturchining ko'nikmalari ro'yxatidan ikkinchi elementni ekranga chiqaring.
+
+5. Ro'yxat ichidagi lug'atlar (List of Dictionaries)
+Topshiriq: Har biri mahsulot nomi va narxini o'z ichiga olgan 3 ta lug'atdan iborat products ro'yxatini tuzing va ularning barchasini for sikli yordamida ekranga chiqaring.
+
+6. Ichma-ich ro'yxatdagi qiymatni o'zgartirish
+Topshiriq: Berilgan team = {"leader": {"name": "Jasur", "active": True}, "members": [{"name": "Ali"}, {"name": "Vali"}]} lug'atida birinchi a'zoning (members ro'yxatining 0-indeksi) ismini "Sardor" deb o'zgartiring.
+
+7. Sikl yordamida ichma-ich lug'atni aylanish
+Topshiriq: employees = {"hr": {"name": "Malika", "salary": 500}, "it": {"name": "Timur", "salary": 900}} lug'atining tashqi kalitlari va ichki lug'atdagi ism va oyliklarni for sikli yordamida chop eting.
+
+8. Ichma-ich tuzilmadagi shartli tekshiruv
+Topshiriq: Talabalar ro'yxatini saqlovchi ichma-ich lug'at tuzing va bahosi 85 dan yuqori bo'lgan talabalarning ismini shart operatori yordamida ajratib oling.
+
+9. Ichma-ich ro'yxatga element qo'shish .append()
+Topshiriq: company = {"department": "Development", "staff": ["Aziz", "Bekzod"]} lug'atidagi staff ro'yxatiga .append() yordamida yangi xodimning ismini qo'shing.
+
+10. Uch bosqichli ichma-ich lug'at (Deeply Nested Dictionary)
+Topshiriq: Mamlakat, uning poytaxti va poytaxtdagi tuman haqidagi ma'lumotlarni o'z ichiga olgan uch darajali ichma-ich lug'at tuzing va eng ichki elementdagi qiymatga murojaat qiling.
