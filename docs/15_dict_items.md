@@ -262,3 +262,36 @@ for mashina in set(mashinalar.values()):
     
 
 Pythonda set yana bir ma'lumot turi bo'lib, ro'yxat va lug'at kabi bir nechta elementlarni saqlashga mo'ljallangan. Lug'at va ro'yxatdan farqli ravishda, set ichidagi elementlar biror tartibda saqlanmaydi, va ularga indeks orqali murojat qilib bo'lmaydi. Shuningdek, set ichida bir hil elementlar bo'lmaydi.
+
+#### Topshiriqlar
+
+1. .items() metodi yordamida juftliklarni olish
+Topshiriq: Berilgan student = {"name": "Malika", "age": 21, "faculty": "Matematika"} lug'atining barcha kalit va qiymat juftliklarini .items() metodi yordamida ekranga chiqaring.
+
+2. for siklida .items() orqali iteratsiya qilish
+Topshiriq: scores = {"math": 85, "physics": 90, "chemistry": 78} lug'atini for sikli va .items() yordamida aylanib, har bir fan va uning bahosini "Fan: [fan], Baho: [baho]" ko'rinishida chop eting.
+
+3. Qiymatlar bo'yicha shart tekshirish
+Topshiriq: prices = {"apple": 12000, "banana": 8000, "bread": 4000, "milk": 10000} lug'atidan .items() yordamida narxi 9000 so'mdan qimmat bo'lgan mahsulotlar nomini ekranga chiqaring.
+
+4. Kalit va qiymatlarni alohida o'zgaruvchilarga ajratish
+Topshiriq: person = {"first_name": "Jasur", "last_name": "Karimov", "age": 25} lug'atini .items() yordamida siklga qo'yib, har bir iteratsiyada kalit va qiymatni alohida o'zgaruvchilarga (key, value) qabul qilib chop eting.
+
+5. .items() natijasini ro'yxatga (list) o'tkazish
+Topshiriq: data = {"a": 1, "b": 2, "c": 3} lug'atining .items() natijasini list() yordamida ro'yxatga aylantiring va uning 0-indeksidagi elementni ekranga chiqaring.
+
+6. Shartli ravishda qiymatni yangilash
+Topshiriq: employees = {"Ali": 500, "Vali": 700, "Sardor": 450} lug'atidagi xodimlarning maoshini .items() orqali tekshirib, agar maoshi 600 dan kam bo'lsa, uni 10 foizga oshirilgan holda yangi lug'atga yozing.
+
+7. Kalit uzunligini hisoblash
+Topshiriq: colors = {"red": "#FF0000", "green": "#00FF00", "blue": "#0000FF"} lug'atidan .items() yordamida foydalanib, uzunligi 4 ta harfdan iborat bo'lgan kalitlar va ularning rang kodlarini chiqaring.
+
+8. Ikki lug'at elementlarini solishtirish
+Topshiriq: Berilgan dict1 = {"a": 10, "b": 20} va dict2 = {"a": 10, "b": 25} lug'atlarining .items() natijalarini solishtirib, qaysi juftliklar bir xil ekanligini aniqlang.
+
+9. .items() yordamida qiymatlar yig'indisini topish
+Topshiriq: expenses = {"food": 150000, "transport": 50000, "entertainment": 80000} lug'atidagi barcha qiymatlar (xarajatlar) yig'indisini .items() yordamida hisoblang.
+
+10. Juftliklarni teskari o'girish (Invert Dictionary)
+Topshiriq: original = {1: "one", 2: "two", 3: "three"} lug'atining .items() natijasidan foydalangan holda, kalit va qiymatlarning o'rnini almashtirib yangi lug'at hosil qiling.
+
