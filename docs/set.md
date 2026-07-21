@@ -139,3 +139,81 @@ print(f"Setda qidirish vaqti: {time.time() - start} sek")
     
 
 Natijada Set taxminan 10 000 - 100 000 marta tezroq ekanini ko'rasiz.
+
+
+
+#### Topshiriqlar
+
+1. To'plam yaratish va takrorlanuvchi elementlar
+Topshiriq: Berilgan [1, 2, 2, 3, 4, 4, 5, 1] ro'yxatidan foydalanib to'plam yarating va natijani ekranga chiqaring. Ekranda takrorlangan elementlar yo'qligiga e'tibor bering.
+
+2. Element qo'shish (add)
+Topshiriq: Bo'sh colors = {"red", "green", "blue"} to'plamiga add() metodi yordamida "yellow" rangini qo'shing.
+
+3. Mavjud elementni nusxalash (copy)
+Topshiriq: original_set = {10, 20, 30} to'plamining nusxasini copy_set o'zgaruvchisiga oling va copy_set ga 40 ni qo'shing. original_set o'zgarmaganini tekshiring.
+
+4. Elementni o'chirish (remove va discard)
+Topshiriq: {5, 10, 15, 20} to'plamidan remove() yordamida 15 ni, discard() yordamida esa to'plamda yo'q bo'lgan 100 ni o'chirishga harakat qiling (xatolik bermasligini kuzating).
+
+5. Tasodifiy elementni sug'urib olish (pop)
+Topshiriq: items = {"apple", "banana", "cherry"} to'plamidan pop() metodini ishlatib tasodifiy elementni sug'urib oling va qolgan to'plamni chiqaring.
+
+6. To'plamni to'liq tozalash (clear)
+Topshiriq: data = {1, 2, 3, 4, 5} to'plamini clear() metodi yordamida bo'shating.
+
+7. Birlashma amali (union va |)
+Topshiriq: set_a = {1, 2, 3} va set_b = {3, 4, 5} to'plamlarining birlashmasini ham union() metodi, ham | operatori yordamida toping.
+
+8. Kesishma amali (intersection va &)
+Topshiriq: Yuqoridagi set_a va set_b to'plamlarining kesishmasini toping.
+
+9. Ayirma amali (difference va -)
+Topshiriq: set_a da bor, lekin set_b da yo'q bo'lgan elementlarni toping (set_a - set_b).
+
+10. Simmetrik ayirma (symmetric_difference va ^)
+Topshiriq: Ikkala to'plamning faqat bittasida qatnashgan (umumiy bo'lmagan) elementlarni toping.
+
+11. To'plamlarni yangilash (update)
+Topshiriq: base_set = {1, 2} to'plamiga update() metodi yordamida [3, 4, 5] ro'yxatidagi elementlarni qo'shing.
+
+12. Kesishmani yangilash (intersection_update)
+Topshiriq: x = {1, 2, 3, 4} va y = {3, 4, 5, 6} berilgan. x ustida intersection_update(y) ni bajaring va x ning qiymati qanday o'zgarganini ko'ring.
+
+13. Ayirmani yangilash (difference_update)
+Topshiriq: s1 = {1, 2, 3, 4} to'plamidan s2 = {3, 4} elementlarini difference_update() yordamida ayirib tashlang.
+
+14. Qism to'plamni tekshirish (issubset)
+Topshiriq: sub = {2, 3} va main = {1, 2, 3, 4, 5} berilgan. sub to'plami main ning qism to'plami ekanligini issubset() orqali tekshiring.
+
+15. Ustuvor to'plamni tekshirish (issuperset)
+Topshiriq: main to'plami sub ni o'z ichiga olishini (ya'ni issuperset ekanligini) tekshiring.
+
+16. Kesishmasligini tekshirish (isdisjoint)
+Topshiriq: group1 = {1, 2, 3} va group2 = {4, 5, 6} to'plamlarining kesishmasi bo'sh ekanligini isdisjoint() yordamida aniqlang.
+
+17. Ro'yxatdagi dublikatlarni tozalash funksiyasi
+Topshiriq: Istalgan ro'yxatni qabul qilib, undagi barcha takrorlangan elementlarni olib tashlaydigan va natijani tartiblangan holda qaytaruvchi funksiya yozing.
+
+18. Ikki matndagi umumiy harflarni topish
+Topshiriq: Berilgan ikki xil matn (str1 = "python", str2 = "java") tarkibidagi umumiy harflarni to'plam yordamida toping.
+
+19. Immutability va Frozenset
+Topshiriq: O'zgartirib bo'lmaydigan to'plam — frozenset yarating va unga yangi element qo'shib ko'ring (qanday xatolik chiqishini kuzating).
+
+20. Set Comprehension
+Topshiriq: 1 dan 10 gacha bo'lgan sonlar orasidan faqat juft sonlarning kvadratlarini o'z ichiga olgan to'plamni set comprehension yordamida hosil qiling.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
