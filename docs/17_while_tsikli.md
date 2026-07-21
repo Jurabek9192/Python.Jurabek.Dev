@@ -264,3 +264,35 @@ while son>0:
 Yuqoridagi kodda esa xato shart tufayli (son>0) kod abadiy aylanadi.
 
 Dastur bajarilishini to'xtatish uchun konsolda Ctrl+C tugmasini bosing
+
+#### Topshiriqlar
+
+1. Oddiy while sikli
+Topshiriq: while siklidan foydalangan holda 1 dan 5 gacha bo'lgan sonlarni ekranga chiqaruvchi dastur tuzing.
+
+2. Shart va o'zgaruvchini yangilash
+Topshiriq: 10 dan 1 gacha bo'lgan sonlarni kamayish tartibida while sikli yordamida ekranga chiqaring.
+
+3. Juft sonlarni chiqarish
+Topshiriq: while sikli yordamida 1 dan 20 gacha bo'lgan faqat juft sonlarni ekranga chop eting.
+
+4. Sonlar yig'indisini hisoblash (sum)
+Topshiriq: 1 dan 10 gacha bo'lgan sonlarning yig'indisini while sikli yordamida hisoblang va natijani chiqaring.
+
+5. break operatori yordamida to'xtatish
+Topshiriq: 1 dan 100 gacha sonlarni sanaydigan while siklini yozing, lekin son 5 ga teng bo'lganida break operatori yordamida siklni majburiy to'xtating.
+
+6. continue operatoridan foydalanish
+Topshiriq: 1 dan 10 gacha bo'lgan sonlarni chiqaruvchi sikl tuzing, faqat 5 sonini tashlab o'tib ketish (continue yordamida) uchun shart yozing.
+
+7. Cheksiz sikl va uni to'xtatish (Infinite Loop)
+Topshiriq: while True cheksiz siklini tuzing va foydalanuvchi "exit" deb yozganda break orqali sikldan chiqib ketadigan mexanizm yarating.
+
+8. Parol kiritish tekshiruvi
+Topshiriq: To'g'ri parol ("python123") kiritilmaguncha foydalanuvchidan doimiy ravishda parol so'rab turadigan while siklini tuzing.
+
+9. Sonni topish o'yini (Alohida urinishlar)
+Topshiriq: Dastur ichida yashiringan bitta sonni foydalanuvchi topmaguncha while sikli yordamida har safar uning kiritgan soni katta yoki kichikligini aytib turing.
+
+10. while-else konstruksiyasi
+Topshiriq: while sikli tugagandan so'ng else bloki ishga tushib, "Sikl muvaffaqiyatli yakunlandi" degan yozuvni chiqaradigan kichik dastur tuzing.
