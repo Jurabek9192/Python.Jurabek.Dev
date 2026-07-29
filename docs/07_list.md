@@ -1,228 +1,191 @@
-#### List bilan tanishamiz
-Esingizda bo'lsa biz o'zgarvchi yaratib unga ma'lumotlar yuklashni keyin foydalanuvchidan ham olib printda chiqarishni o'rgangan ediik endi biz bitta o'zgaruvchiga bir necha ma'lumotni yuklashni ular ustida turli amallar qilishni o'rganamiz.
+# MATNLAR (STRING) VA METODLARI
 
-Buning uchun biz yangi ma'lmot turi **list** *ro'yxat* bilan tanishib olishimiz kerak bo'ladi ya'ni nomidan ham aytib turibdi ro'yxatda ma'lumotlar ro'yxat shaklida bo'ladi. Ro'yxatning ishida esa uning **element**lari bo'ladi.
-Ro'yxatda son, matn, yoki aralsh turdagi ma'lumotlar saqlanishi mumkin.
+## String nima?
 
-List quyidagicha bo'ladi.
-
+**String** (matn) — qo'shtirnoq (`" "`) yoki bittirnoq (`' '`) ichiga olingan belgilar ketma-ketligi. Python'da ikkalasi ham bir xil ishlaydi, farqi yo'q.
 
 ```python
-mevalar=['olma', 'nok', 'uzum', 'shaftoli', 'kivi', 'apelsin'] # Stringlar
-narxlar=[20000, 23000, 15000, 13000, 15000, 24000] # Sonlar
-sonlar=['bir', 'ikki', 3, 4, True] # Aralash
-ismlar=[] # Bo'sh ro'yxat
+ism1 = "Nodira"
+ism2 = 'Nodira'
+print(ism1 == ism2)   # True
 ```
 
-Ro'yxat saqlaydigan o'zgaruvchilarni Ko'plik shakllarda nomlash tavsiya qilinadi ammo bu qoida emas
-
-#### List elementlari
-Ro'yxatdagi har bir elementning o'zining tartib raqami (index) bo'ladi va ularga shu index orqali murojaat qilamiz.
-
-Dasturlash olamida indeks 0 dan boshlanadi! Ya'ni Listning birinchi elementing tartib raqami (indeksi) 0 ga, ikkinchi elementning indeksi 1 ga teng va hokazo.
-
+Agar matn ichida tirnoq ishlatish kerak bo'lsa, tashqi va ichki tirnoqlarni farqlash kerak:
 
 ```python
-mevalar=['olma', 'nok', 'uzum', 'shaftoli', 'kivi', 'apelsin']
-print(f"Birinchi meva : {mevalar[0]}")
-print(f"Ikkinchi meva : {mevalar[1]}")
+gap = "U menga: 'Salom' dedi"
+gap2 = 'U menga: "Salom" dedi'
+print(gap)
+print(gap2)
 ```
 
-    Birinchi meva : olma
-    Ikkinchi meva : nok
-    
-
-Agar list ichidagi elementlar string bo'lsa ularga [string metodlarini](https://www.w3schools.com/python/python_ref_string.asp) qo'llashimiz mumkin:
-
-
+Ko'p qatorli matn uchun uchta tirnoq ishlatiladi:
 
 ```python
-universitetlar=['toshkent davlat texnika universiteti', 'toshkent axborot texnologiyalari universiteti',
-                'samarqand pedagogika universitet']
-
-print(universitetlar[0].title())
-print(universitetlar[1].capitalize())
-print(universitetlar[2].upper())
+matn = """Bu birinchi qator.
+Bu ikkinchi qator."""
+print(matn)
 ```
 
-    Toshkent Davlat Texnika Universiteti
-    Toshkent axborot texnologiyalari universiteti
-    SAMARQAND PEDAGOGIKA UNIVERSITET
-    
-
-Elementlar ustida turli arifmetik amallar bajaramiz
-
+## Stringlarni birlashtirish (concatenation)
 
 ```python
-narxlar=[12_000, 15_000, 14000, 4_000 ]
-print(narxlar[0]+narxlar[2])
+ism = "Sardor"
+familiya = "Aliyev"
+tolik = ism + " " + familiya
+print(tolik)
 ```
 
-    26000
-    
+```
+Sardor Aliyev
+```
 
-Pythonda Listning eng oxirgi elementiga -1 indeksi orqali ham murojaat qilish mumkin. Bu usul Listning uzunligini bilmaganda yoki unutib qo'yganda juda qo'l kelganda.
-
+**Diqqat:** `+` operatori bilan faqat string'ni string bilan birlashtirish mumkin. Sonni to'g'ridan-to'g'ri birlashtirib bo'lmaydi:
 
 ```python
-mashinalar=['Damas', 'Matiz', 'Nexia', 'Nexia 3', 'Tracker']
-print(mashinalar[-1]) # -1 Bilan oxirgi mashinaga murojaat qilamiz.
+yosh = 20
+# print("Yoshim: " + yosh)     # XATOLIK! int'ni str bilan qo'shib bo'lmaydi
+print("Yoshim: " + str(yosh))  # to'g'ri — avval str() ga aylantirildi
 ```
 
-    Tracker
-    
+## f-string — zamonaviy formatlash usuli
 
-#### Listga elementlarni qo'shish, o'chirish va almashtirish
-Ro'yxatdagi biror elementning qaymatini o'zgartirish uchun, o'sha elementning indeksi bilan murojaat qilamiz va yangi qiymat yuklaymiz.
-
+Matn ichiga o'zgaruvchi qiymatlarini kiritishning eng qulay yo'li — **f-string**:
 
 ```python
-narxlar=[12_000, 18000, 6000, 39999]
-narxlar[-1]=40000
-narxlar[2]=5000
-narxlar[1]=narxlar[3] + 2000
-narxlar[1]=narxlar[0]+narxlar[2]
-print(narxlar)
+ism = "Malika"
+yosh = 19
+
+print(f"Mening ismim {ism}, yoshim {yosh}")
+print(f"Ikki yildan keyin {yosh + 2} yoshda bo'laman")
 ```
 
-    [12000, 17000, 5000, 40000]
-    
+```
+Mening ismim Malika, yoshim 19
+Ikki yildan keyin 21 yoshda bo'laman
+```
 
-#### Yangi element qo'shish
-**.append() metodi**
-Ro'yxatga yangi elemment qo'shishning oson usuli bu *.append()* metodi yordamida ro'xatga oxirgi qiymat qo'shish mumkin.
+f-string ichida istalgan Python ifodasi (hisob-kitob, funksiya chaqiruvi) ishlatilishi mumkin — bu uni `+` orqali birlashtirishdan ancha qulay va toza qiladi.
 
+## Stringning indekslanishi
+
+Har bir belgi (harf) stringda o'z **indeksi** (o'rni)ga ega, sanoq `0` dan boshlanadi:
 
 ```python
-mevalar=['olma', 'nok']
-print(mevalar)
-mevalar.append('tarvuz')
-mevalar.append('uzum')
-print(mevalar)
+soz = "Python"
+#      P  y  t  h  o  n
+#      0  1  2  3  4  5
+#     -6 -5 -4 -3 -2 -1
+
+print(soz[0])    # P
+print(soz[5])    # n
+print(soz[-1])   # n  (охиридан биринчи)
+print(soz[-2])   # o  (охиридан иккинчи)
 ```
 
-    ['olma', 'nok']
-    ['olma', 'nok', 'tarvuz', 'uzum']
-    
+## Kesish (slicing)
 
-**.append()**  metodi bo'sh listni to'ldirishda juda qulay ayniqsa dastur boshida bo'sh ro'yxat yaratib olib keyin uni dastur davomida to'ldirib borish qulay
-
+Stringning bir qismini olish uchun `[boshlanish:tugash]` sintaksisi ishlatiladi (`tugash` indeksi kiritilmaydi):
 
 ```python
-tumanlar=[]
-tumanlar.append('yakkabog\'')
-tumanlar.append('g\'uzor')
-tumanlar.append('qamashi')
-tumanlar.append('chiroqchi')
-print(tumanlar)
+soz = "Dasturlash"
+
+print(soz[0:4])    # Dast
+print(soz[4:])      # urlash  (4-indeksdan oxirigacha)
+print(soz[:4])      # Dast    (boshidan 4-indeksgacha)
+print(soz[:])       # Dasturlash  (butun matn)
+print(soz[::2])     # Dsurah  (har 2-belgidan)
+print(soz[::-1])    # halsrutsaD  (teskari tartibda)
 ```
 
-    ["yakkabog'", "g'uzor", 'qamashi', 'chiroqchi']
-    
-
-**.insert() metodi**
-Ro'yxatning istalgan joyiga yangi element qo'shishda *.insert()* metodi ishlatiladi. .insert() metodining ichida yangi element indeksi va qiymati beriladi.
-
+## String uzunligi
 
 ```python
-mashinalar=['matiz', 'tico', 'jentra']
-print(mashinalar)
-mashinalar.insert(2, 'malibu')
-print(mashinalar)
+soz = "Toshkent"
+print(len(soz))     # 8
 ```
 
-    ['matiz', 'tico', 'jentra']
-    ['matiz', 'tico', 'malibu', 'jentra']
-    
+## Muhim string metodlari
 
-#### Elementni o'chirish
-Ro'yxatdan elementni o'chirish uchun elementning indeksini yoki qiymatini bilishimiz kerak bo'ladi.
-
-Indeks yordamida olib tashlash uchun **del** operatoridan foydalanamiz.
-
+Python stringlar bilan ishlash uchun ko'plab tayyor **metodlar**ni taqdim etadi. Metod — obyektga tegishli funksiya bo'lib, `.` orqali chaqiriladi.
 
 ```python
-mevalar=['olma', 'nok', 'tarvuz', 'uzum']
-print(mevalar)
-del mevalar[2]
-print(mevalar)
+matn = "  Salom, Dunyo!  "
+
+print(matn.upper())         # "  SALOM, DUNYO!  "     — katta harflarga
+print(matn.lower())         # "  salom, dunyo!  "     — kichik harflarga
+print(matn.strip())         # "Salom, Dunyo!"          — bo'sh joylarni olib tashlash
+print(matn.title())         # "  Salom, Dunyo!  "      — har so'zning bosh harfi katta
 ```
-
-    ['olma', 'nok', 'tarvuz', 'uzum']
-    ['olma', 'nok', 'uzum']
-    
-
-Element qiymati bo'yicha o'chirish uchun esa **.remove()** metodidan foydalanamiz. Buning uchun qavs ichida o'chirib tashlsh kerak bo'lgan qiymat beriladi.
-
 
 ```python
-mevalar=['nok', 'jiyda', 'olma', 'mandarin']
-print(mevalar)
-mevalar.remove('mandarin')
-print(mevalar)
+soz = "Men Python o'rganyapman"
+
+print(soz.replace("Python", "JavaScript"))   # almashtirish
+print(soz.split())                            # ["Men", "Python", "o'rganyapman"] — ro'yxatga bo'lish
+print(soz.find("Python"))                     # 4 — qidirilgan matn boshlanadigan indeks
+print(soz.count("a"))                          # nechta "a" borligini sanaydi
+print(soz.startswith("Men"))                   # True
+print(soz.endswith("man"))                     # True
 ```
 
-    ['nok', 'jiyda', 'olma', 'mandarin']
-    ['nok', 'jiyda', 'olma']
-    
+## split() va join() — bog'liq juftlik
 
-!!! info ".remove(qiymat) metodi"
-    Bu metod ro'yxatda uchragan birinchi mos keluvchi qiymatni o'chiradi.
-    Agar ro'yxatda 2 ta bir xil element bo'lsa, birinchisi o'chadi.
-
+`split()` matnni ro'yxatga bo'lsa, `join()` ro'yxatni matnga birlashtiradi — bular bir-birining teskarisi:
 
 ```python
-hayvonlar=['it', 'mushuk', 'sichqon', 'ot', 'ilon', 'mushuk']
-print(hayvonlar)
-hayvonlar.remove('mushuk')
-print(hayvonlar)
+gap = "olma,uzum,anor"
+royxat = gap.split(",")
+print(royxat)               # ['olma', 'uzum', 'anor']
+
+qayta = "-".join(royxat)
+print(qayta)                 # olma-uzum-anor
 ```
 
-    ['it', 'mushuk', 'sichqon', 'ot', 'ilon', 'mushuk']
-    ['it', 'sichqon', 'ot', 'ilon', 'mushuk']
-    
+## String tekshiruv metodlari
 
-Elementni sug'gurib olish bu nima degani elemantni sug'urib olganingizda sizda qiymat qoladi xohlasangiz uni boshqa o'zgaruvchiga yoki listga yuklaysiz asosiy listda esa qolmaydi.
-
+Bu metodlar `True`/`False` qaytaradi:
 
 ```python
-bozorlik = ["yog'", 'un', 'piyoz', 'banan', "go'sht"]
-mahsulot = bozorlik.pop(3) # Ro'yxatdan banan ni sug'urib olamiz
-print("Men " + mahsulot + " sotib oldim")
-print("Olinmagan mahsulotlar: ", bozorlik)
+print("12345".isdigit())     # True — faqat raqamlardan iboratmi
+print("Python".isalpha())    # True — faqat harflardan iboratmi
+print("Python3".isalnum())   # True — harf va raqamlardan iboratmi
+print("   ".isspace())        # True — faqat bo'sh joylardan iboratmi
+print("PYTHON".isupper())     # True — barchasi katta harfmi
+print("python".islower())     # True — barchasi kichik harfmi
 ```
 
-    Men banan sotib oldim
-    Olinmagan mahsulotlar:  ["yog'", 'un', 'piyoz', "go'sht"]
-    
+Bu metodlar amaliyotda foydalanuvchi kiritgan ma'lumotni tekshirishda juda foydali, masalan telefon raqami faqat sonlardan iboratligini tekshirishda.
 
-#### Topshiriqlar
-1. "Avtopark" mashqi
-mashinalar degan ro'yxat yarating va unga 4 ta yoqtirgan avtomobilingiz nomini yozing. Har bir mashina nomini bosh harf bilan konsolga chiqaring (masalan: "Men Chevrolet Gentra haydagim keladi").
+## Stringlar o'zgarmasdir (immutable)
 
-2. "Oila a'zolari" (Index bilan ishlash)
-oila deb nomlangan ro'yxat tuzing. Ro'yxatdan foydalanib, oilangizning eng kichik va eng katta a'zosini konsolga chiqaruvchi kod yozing.
+Muhim qoida: Python'da stringni **to'g'ridan-to'g'ri o'zgartirib bo'lmaydi**. Har qanday "o'zgartirish" metodi aslida yangi string yaratadi:
 
-3. "Dars jadvali" (Elementni o'zgartirish)
-fanlar degan ro'yxat yarating. Agar dars jadvalingiz o'zgargan bo'lsa, ro'yxatdagi 2-elementni o'chirib, o'rniga boshqa fan nomini yozing.
+```python
+soz = "salom"
+# soz[0] = "S"    # XATOLIK! stringni indeks orqali o'zgartirib bo'lmaydi
 
-4. "Bozorlik" (Arifmetika va List)
-narxlar degan ro'yxat yarating (masalan: [12000, 5000, 25000, 18000]). Eng qimmat va eng arzon mahsulotlarning narxini qo'shib, umumiy summani hisoblang.
+soz = "S" + soz[1:]   # bu ishlaydi — yangi string yaratildi
+print(soz)              # Salom
+```
 
-5. "Kutubxona" (.append() va .insert())
-kitoblar nomli bo'sh ro'yxat oching. .append() yordamida oxiriga 3 ta kitob, .insert() yordamida ro'yxat boshiga 1 ta sevimli kitobingizni qo'shing.
+---
 
-6. "Sportchilar" (.remove() va .pop())
-sportchilar ro'yxatini tuzing. Jarohat olgan sportchini .remove() bilan o'chiring, faoliyatini yakunlagan sportchini esa .pop() yordamida sug'urib olib: "Ushbu sportchi nafaqaga chiqdi" deb xabar chiqaring.
+## 🎯 Mashqlar
 
-7. "Shaharlar" (Slicing - Kesib olish)
-O'zbekistonning 6 ta viloyati nomini o'z ichiga olgan viloyatlar ro'yxatini yarating. Undan faqat o'rtadagi 2 ta viloyatni ajratib olib, yangi ro'yxatga saqlang.
+🟢 **Oson daraja**
 
-8. "O'quvchilar reytingi"
-ballar degan ro'yxat yarating (masalan: [85, 90, 70, 100, 60]). Ro'yxatdagi eng past ballni topib, unga 5 ball "sovg'a" tariqasida qo'shing va ro'yxatni yangilang.
+1. Foydalanuvchidan ism va familiyani alohida so'rab, f-string yordamida "Sizning to'liq ismingiz: [ism] [familiya]" deb chiqaring.
+2. Foydalanuvchi kiritgan matnni katta harflarga, so'ng kichik harflarga aylantirib chiqaring.
+3. Foydalanuvchi kiritgan matn nechta harfdan iboratligini (`len()`) chiqaring.
+4. Berilgan so'zni teskari tartibda chiqaring (slicing `[::-1]` dan foydalaning).
+5. Foydalanuvchi kiritgan gapda muayyan bir so'z nechta marta uchrashini (`.count()`) toping.
 
-9. "Sayohat sumkasi" (Kombinatsiya)
-sumka nomli ro'yxatga sayohat uchun kerakli 5 ta buyumni yozing. Agar sumkangizda joy qolmagan bo'lsa, bitta keraksiz buyumni o'chirib, o'rniga "Fotoapparat" qo'shing.
+🟡 **O'rta daraja**
 
-10. "Yutuqli o'yin"
-ishtirokchilar va goliblar degan ikki ro'yxat tuzing. .pop() yordamida ishtirokchilar orasidan tasodifiy bittasini (yoki oxirgisini) olib, goliblar ro'yxatiga o'tkazing va "G'olib: [ism]" deb e'lon qiling.
+6. Foydalanuvchidan email manzilini so'rang va u `@` belgisini o'z ichiga olishini tekshiring (`in` operatoridan yoki `.find()` dan foydalaning).
+7. Foydalanuvchi kiritgan gapdagi so'zlar sonini (`.split()` orqali) hisoblang.
+8. Berilgan matndagi barcha bo'sh joylarni pastki chiziq (`_`) bilan almashtiruvchi dastur yozing.
+9. Palindrom tekshiruvchi dastur yozing — so'z old-orqasiga bir xil o'qiladimi (masalan "ANNA"). Katta-kichik harflarni hisobga olmang.
+
+---
