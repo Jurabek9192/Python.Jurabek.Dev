@@ -1,194 +1,179 @@
-### Floats-O'nlik sonlar
-Pythonda o'nlik sonlar *floating point numbers* yoki qisqa qilib floats deyiladi. *"Floating point numbers"* atamasi o'zbek tiliga *"suzuvchi nuqtali sonlar"* deb tarjima qilish mumkin.Ingliz tilida o'nlik sonlarni yozish uchun (,) vergul emas (.) ishlatiladi, va bu nuqta sonning katta kichikligiga qarab joyi o'zgargani uchun *"floating" (suzuvchi)* deyiladi
+# SONLAR VA MATEMATIK AMALLAR
 
+## Son turlari
 
-```python
-pi=3.14159          # o'nlik son(float)
-radius=10           # butun son (integer)
-diametr=2*radius
-print("Aylana uzunligi ", pi*diametr, " ga teng.")
-```
+Python'da ikkita asosiy son turi bor:
 
-    Aylana uzunligi  62.8318  ga teng.
-    
-
-### Butun sondan o'nlik songa
-Avval aytganimizdek ikki butun sonni bo'lishda ham o'nlik son hosil bo'ladi natija butun bo'lsa ham.
-
+- **`int`** — butun sonlar: `5`, `-100`, `0`, `1000000`
+- **`float`** — kasr (o'nlik) sonlar: `3.14`, `-0.5`, `2.0`
 
 ```python
-a=-20
-b= 40
-print(b/a)
+butun = 10
+kasr = 10.5
+print(type(butun))
+print(type(kasr))
 ```
 
-    -2.0
-    
+```
+<class 'int'>
+<class 'float'>
+```
 
-va bundan tashqari butun son va o'nlik sonlar orasidagi har qanday amal ham o'nlik son qaytaradi.
+**Diqqat:** `10` va `10.0` Python uchun turli xil qiymatlar — biri `int`, ikkinchisi `float`.
 
+## Asosiy matematik operatorlar
+
+| Operator | Ma'nosi | Misol | Natija |
+|---|---|---|---|
+| `+` | Qo'shish | `5 + 3` | `8` |
+| `-` | Ayirish | `5 - 3` | `2` |
+| `*` | Ko'paytirish | `5 * 3` | `15` |
+| `/` | Bo'lish (natija doim float) | `5 / 2` | `2.5` |
+| `//` | Butun bo'lish (qoldiqsiz) | `5 // 2` | `2` |
+| `%` | Bo'lishdan qolgan qoldiq | `5 % 2` | `1` |
+| `**` | Darajaga ko'tarish | `5 ** 2` | `25` |
 
 ```python
-a=4
-b=5.0
-# Quyida barcha arifmetik amallarni bajaramiz
-print(f"{a} + {b} = {a+b}")
-print(f"{a} - {b} = {a-b}")
-print(f"{a} * {b} = {a*b}")
-print(f"{a} / {b} = {a/b}")
+a = 17
+b = 5
+
+print(a + b)    # 22
+print(a - b)    # 12
+print(a * b)    # 85
+print(a / b)    # 3.4
+print(a // b)   # 3
+print(a % b)    # 2
+print(a ** b)   # 1419857
 ```
 
-    4 + 5.0 = 9.0
-    4 - 5.0 = -1.0
-    4 * 5.0 = 20.0
-    4 / 5.0 = 0.8
-    
+## `/` va `//` orasidagi farq
 
-**Uzun sonlarni kiritish**
-Uzun sonlarni kiritishda qulaylik uchun, raqamlarni pastki chiziq(\_) yordamida guruhlash mumkin. *Python-son tarkibidagi pastki chiziqlarni (\_)* **inobatga olmaydi** yodda saqlang bunda bu sonlar uzun son sifatida qabul qilinadi.
-
+Bu ikkalasi ko'p chalkashtiriladi:
 
 ```python
-aholi_soni=7_893_000_000 # shunda qulayroq ko'rinadi
-print(f"Yer yuzidagi aholi soni : {aholi_soni} ga teng.")
+print(7 / 2)    # 3.5   — oddiy bo'lish, natija doim float
+print(7 // 2)   # 3     — butun qism olinadi (pastga qarab yaxlitlanadi)
+print(-7 // 2)  # -4    — diqqat! pastga qarab yaxlitlash manfiy tomonga ham ishlaydi
 ```
 
-    Yer yuzidagi aholi soni : 7893000000 ga teng.
-    
+## `%` operatori — qoldiqni topish
 
-#### Konstanta
-Aksar dasturlash tillarida konstant qiymatlar tushunchasi bor. Konstantlar o'zgarmas bo'ladi (misol uchun
-π
-π ning qiymati konstant, o'zgarmas qiymat). Pythonda konstant tushunchasi yo'q, shuning uchun dasturchilar bunday o'zgaruvchilarning nomini katta harflar bilan yozadilar (ogohlantirish sifatida). Bu albatta qat'iy qonun emas, lekin kelajakda o'zgaruvchilar orasida konstant qiymatlarni ajratish uchun yaxshi usul.
-
+`%` operatori amaliyotda juda ko'p ishlatiladi, masalan sonning juft yoki toqligini aniqlashda:
 
 ```python
-PI=3.14159
-radius=21.2
+son = 7
+if son % 2 == 0:
+    print("Juft son")
+else:
+    print("Toq son")
 ```
 
-#### Bir necha o'zgaruvchiga qiymat berish
-Bir necha o'zgaruvchiga qiymat beridh uchun o'zgaruvchilar va ularga mos qiymatlar vergul( , ) bilan ajratiladi.
+```
+Toq son
+```
 
+Bu shu bilan ishlaydi: agar son 2 ga qoldiqsiz bo'linsa (`% 2 == 0`), demak u juft.
+
+## Amallar ustuvorligi (operator precedence)
+
+Matematikadagi kabi, Python'da ham amallar ma'lum tartibda bajariladi:
+
+1. `()` — qavslar birinchi
+2. `**` — darajaga ko'tarish
+3. `*`, `/`, `//`, `%` — ko'paytirish/bo'lish
+4. `+`, `-` — qo'shish/ayirish
 
 ```python
-x, y, z=10, -7.94, -30
+natija = 2 + 3 * 4        # avval 3*4=12, keyin 2+12=14
+print(natija)              # 14
 
-print(f"x ning turi {type(x)}")
-print(f"y ning turi {type(y)}")
-print(f"z ning turi {type(z)}")
+natija = (2 + 3) * 4       # avval qavs: 2+3=5, keyin 5*4=20
+print(natija)               # 20
 ```
 
-    x ning turi <class 'int'>
-    y ning turi <class 'float'>
-    z ning turi <class 'int'>
-    
-
-#### O'zgaruvchining turini almashtirish (typecasting)
-Keling biz siz bilan bir misol ko'ramiz unda ism va yosh degan o'zgaruvchilarga ma'lumotlar yuklaymiz va ularni printda turlicha usulda chiqarib ko'ramiz
-
+## Foydali matematik funksiyalar
 
 ```python
-ism="Javohir"
-yosh=36
-xabar=ism+" " + yosh + " yoshda."
-print(xabar)
+print(round(3.7))       # 4    — yaqin butun songa yaxlitlash
+print(round(3.14159, 2)) # 3.14 — 2 xonagacha yaxlitlash
+print(abs(-15))          # 15   — mutlaq qiymat (manfiylikni olib tashlaydi)
+print(max(4, 9, 2))      # 9    — eng katta qiymat
+print(min(4, 9, 2))      # 2    — eng kichik qiymat
+print(pow(2, 5))         # 32   — 2 ni 5-darajaga ko'tarish (** bilan bir xil)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    Cell In[10], line 3
-          1 ism="Javohir"
-          2 yosh=36
-    ----> 3 xabar=ism+" " + yosh + " yoshda."
-          4 print(xabar)
-    
-
-    TypeError: can only concatenate str (not "int") to str
-
-
-Demak biz kutilgan natijani ololmadik ya'ni xatolik chiqdi. Agar xatoni ingliz tilidan tarjima qilsak, matn(str) va son(int) ni jamlab bo'lmaydi degan ma'no chiqadi.
-
-Demak Pythonda matn(string) va son(int, float) turidagi o'zgaruvchilarni jamlab bo'lmaydi. Xo'sh bunda biz nima qila olamiz axir natija bizga kerak va buning yo'li bormi ? **ALBATTA**.
-
-Pythonda bir turdagi o'zgaruvchini boshqa turga o'tkazish mumkin va bu *typecasting* deyiladi. Buni amalga oshirish uchun Pythonda maxsus funksiyalar bor va ular quyidagilar.  
-str() --int yoki float turidagi sonlarni matnga o'zgartiradi.  
-int() --matn yoki float ko'rinishdagi qiymatlarni butun songa o'tkazadi. Bunda matn va float butun son ko'rinishida bo'lsa o'zgarishsiz agar butun son bo'lmasa unda butun son sifatida yaxlitlab olinadi.  
-float() -- mant yoki int butun sonni o'nli kasr son turiga almashtiradi.
-
-Demak tepadagi odimiz to'g'ri ishlashi uchun kodga o'zagrtish kiritamiz.
-
+Murakkabroq matematik funksiyalar uchun `math` moduli ishlatiladi:
 
 ```python
-ism="Javohir"
-yosh=36
-xabar=ism+" " + str(yosh) + " yoshda."
-print(xabar)
+import math
+
+print(math.sqrt(16))     # 4.0   — kvadrat ildiz
+print(math.floor(3.9))   # 3     — pastga yaxlitlash
+print(math.ceil(3.1))    # 4     — yuqoriga yaxlitlash
+print(math.pi)            # 3.141592653589793
 ```
 
-    Javohir 36 yoshda.
-    
+## Qisqartirilgan tenglashtirish operatorlari
 
-**Diqqat** qiling bizning yosh degan o'zgaruvchi o'z holicha qoldi yani uyosh hali ham int turida shunchaki print() ning ichidagina tur o'zgardi holos.
-
-#### O'zgaruvchi turini tekshirish
-
-Kodlarda o'zgaruvchilar ko'payishi tabiiy albatta ayniqsa kodlar ko'paygani sari unda o'zgaruvchilar ham albatta ko'payadi va ba'zan variable ning turini ham untib qo'yish mumkin bunda biz uni osongina teshirib olamiz.
-Buning uchun type() ni ishlatamiz.
-
+O'zgaruvchi ustida amal bajarib, natijani o'sha o'zgaruvchiga qaytadan yozish uchun qisqa yozuv qo'llaniladi:
 
 ```python
-ism="Gavhar"
-yosh=23
-print(f"Ismning turi : {type(ism)}")
-print(f"Yoshning turi : {type(yosh)}")
+son = 10
+son += 5    # son = son + 5  natija: 15
+son -= 3    # son = son - 3  natija: 12
+son *= 2    # son = son * 2  natija: 24
+son /= 4    # son = son / 4  natija: 6.0
+son //= 2   # son = son // 2 natija: 3.0
+son **= 2   # son = son ** 2 natija: 9.0
+print(son)
 ```
 
-    Ismning turi : <class 'str'>
-    Yoshning turi : <class 'int'>
-    
+## Sonlarni solishtirish operatorlari
 
-#### Input() va sonlar
-Endi keling **input()** bilan yaqindan tanishamiz. Endi input() orqali foydalanuvchidan turli ma'lumotlar olamiz.
-
+Bu operatorlar `True` yoki `False` qaytaradi (`bool` turi):
 
 ```python
-# Foydalanuvchining tug'ilgan yilini so'raymiz
-t_yil=int(input("Tug'ilgan yilingizni kiriting:"))
-# Endi esa uning yoshini hisoblaymiz
-yosh=2026-t_yil
-print(f"Siz {yosh} yoshdasiz.")
+print(5 > 3)     # True
+print(5 < 3)     # False
+print(5 == 5)    # True
+print(5 != 3)    # True
+print(5 >= 5)    # True
+print(5 <= 4)    # False
 ```
 
-    Siz 32 yoshdasiz.
-    
-
-Yuqorida biz t_yil da input() ni int() ning ichida yozdik aslida bunday qilmasdan alohida yozsak ham bo'ladi quyidagi kodga diqqat qiling.
-
+## Amaliy misol: BMI kalkulyatori
 
 ```python
-t_yil=input("Tug'ilgan yilingizni kiriting:")
-t_yil=int(t_yil)
-yosh=2026-t_yil
-print(f"Siz {yosh} yoshdasiz.")
+vazn = float(input("Vazningizni kiriting (kg): "))
+boy = float(input("Bo'yingizni kiriting (m): "))
+
+bmi = vazn / (boy ** 2)
+print(f"Sizning BMI ko'rsatkichingiz: {round(bmi, 2)}")
 ```
 
-    Siz 32 yoshdasiz.
-    
+```
+Vazningizni kiriting (kg): 70
+Bo'yingizni kiriting (m): 1.75
+Sizning BMI ko'rsatkichingiz: 22.86
+```
 
-🟢 Oson daraja (Matematik hisob-kitoblar)  
-Ism va familiya: Foydalanuvchidan ismi va familiyasini alohida so'rab, ularni bitta qatorda "Assalomu alaykum, [Familiya] [Ism]!" ko'rinishida chiqaruvchi dastur tuzing.  
-Yillar va kunlar: Foydalanuvchi yoshini kiritsada, dastur uning taxminan necha kun yashaganini hisoblab chiqarsin (1 yil = 365 kun).  
-Kvadrat perimetri: Kvadratning tomoni $a$ berilganda, uning perimetrini ($P = 4a$) hisoblovchi dastur yozing.  
-Sekundlarni daqiqaga o'tkazish: Foydalanuvchi sekundlar miqdorini kiritadi (masalan, 120). Dastur buni necha daqiqa ekanligini ko'rsatishi kerak.  
-🟡 O'rta daraja (Mantiqiy bog'liqlik)  
-Uchburchakning yuzi: To'g'ri burchakli uchburchakning ikkita katetini ($a$ va $b$) so'rang va uning yuzini hisoblang ($S = \frac{1}{2}ab$).  
-Tezlik va vaqt: Masofa ($S$) va vaqt ($t$) berilganda, harakat tezligini ($V = \frac{S}{t}$) aniqlaydigan dastur tuzing.  
-Yillik daromad: Foydalanuvchidan oylik maoshini so'rang. Dastur uning bir yillik umumiy daromadini va 12% daromad solig'i ushlab qolingandan keyingi sof foydasini ko'rsatsin.  
-Sonlarni almashtirish: Ikkita o'zgaruvchi kiriting ($a$ va $b$). Dastur ularning qiymatlarini o'zaro almashtirib qo'ysin (masalan, $a=5, b=10$ bo'lsa, natijada $a=10, b=5$ bo'lib qolsin).  
-🔴 Murakkabroq (Qo'shimcha shartlar bilan)  
-Vaqt oralig'i: Foydalanuvchi hozirgi soat va minutni kiritadi. Dastur kun yakunlanishiga (ya'ni 24:00 gacha) necha soat va necha minut qolganini hisoblashi kerak.  
-Do'kon xaridi: Foydalanuvchi sotib olgan mahsulotining narxi va miqdorini (kg yoki dona) kiritadi. Shuningdek, do'kon beradigan chegirma foizini ham kiritadi. Dastur jami to'lanishi kerak bo'lgan yakuniy summani hisoblab bersin.Kubning xususiyatlari: Kubning tomoni $a$ berilgan. Uning hajmini ($V = a^3$) va to'la sirti yuzini ($S = 6a^2$) hisoblang.
+---
+
+## 🎯 Mashqlar
+
+🟢 **Oson daraja**
+
+1. Ikkita son kiritilsin va ularning yig'indisi, ayirmasi, ko'paytmasi, bo'linmasi ekranga chiqarilsin.
+2. Foydalanuvchi kiritgan sonning juft yoki toqligini aniqlovchi dastur yozing.
+3. To'rtburchakning eni va bo'yini so'rab, uning yuzini va perimetrini hisoblang.
+4. Foydalanuvchidan sekundlarda vaqt kiritilsin va uni soat:minut:sekund formatiga o'girib chiqaring (`//` va `%` dan foydalaning).
+5. Uchta sondan eng kattasini `max()` funksiyasi orqali toping.
+
+🟡 **O'rta daraja**
+
+6. Doira radiusini so'rab, uning yuzi va aylanasi uzunligini hisoblang (`math.pi` dan foydalaning).
+7. Ikki xonali sonning raqamlari yig'indisini toping (masalan 45 → 4+5=9). `//` va `%` operatorlaridan foydalaning.
+8. Kompound foiz kalkulyatori: boshlang'ich summa, yillik foiz stavkasi va yillar sonini so'rab, yakuniy summani hisoblang (`summa * (1 + foiz/100) ** yillar`).
+
+---
+
