@@ -1,232 +1,191 @@
-# String va unicode
+# O'ZGARUVCHILAR VA MA'LUMOT TURLARI
 
-**string** (matn) - Pythondagi eng mashxur ma'lumot turlaridan biri. Avvalgi darsda ko'rganimizdek, o'zgaruvchiga matn yuklash uchun matn qo'shtirnoq (" ") yoki birtirnoq (' ') ichida yozilishi kerak
+## O'zgaruvchi nima?
 
-*Python* da matnlar unicode jadvalining istalgan belgilari ishlatilishi mumkin
-buni o'zingiz kirib ko'ring havoladan  [unicode](https://symbl.cc/) yoki **unicode** deb internetdan qidirsangiz chiqadi ko'rib olishingiz mumkin
-
+**O'zgaruvchi (variable)** — kompyuter xotirasida biror ma'lumotni saqlab turadigan, nom berilgan "quti" hisoblanadi. Har safar bu nomni ishlatganimizda, Python xotiradagi tegishli ma'lumotni oladi.
 
 ```python
-emoji="😀"
-print(emoji)
-telefon="Urra men 📱 oldim "
-print(telefon)
+ism = "Aziz"
+yosh = 15
+print(ism)
+print(yosh)
 ```
 
-    😀
-    Urra men 📱 oldim 
-    
+```
+Aziz
+15
+```
 
-*emoji*-shular kabi bo'ladi
-![image.png](05_string_va_unicoda_files/image.png)
+Bu yerda `ism` va `yosh` — o'zgaruvchilar, `=` esa **tenglashtirish (assignment) operatori** bo'lib, o'ngdagi qiymatni chapdagi o'zgaruvchiga yuklaydi.
 
-### String ustida amallar
-#### Matnlar qo'shish
-Matnlar + orqali amalga oshiriladi
+## O'zgaruvchi nomlash qoidalari
 
+- Faqat harflar, raqamlar va pastki chiziq (`_`) dan iborat bo'lishi mumkin
+- Raqamdan boshlanishi **mumkin emas** (`1ism` — xato, `ism1` — to'g'ri)
+- Katta-kichik harflar farqlanadi (`Ism` va `ism` — ikki xil o'zgaruvchi)
+- Python'ning zaxira so'zlaridan foydalanib bo'lmaydi (`print`, `if`, `for` va h.k.)
+- An'anaviy ravishda **snake_case** uslubi qo'llaniladi: `mening_ismim`, `talaba_soni`
 
 ```python
-name="Javohir"
-print("Mening ismim " + name)
-# Vergul bilan ham chiqarish mumkin ammo vergulda
-# doim bitta bo'sh joy bo'ladi
-print("Mening ismim ", name)
-# bo'sh joy qoldirilmasa ham qoladi
-print("Mening ismim", name)
+# to'g'ri nomlar
+yosh = 20
+talaba_soni = 30
+_vaqtinchalik = "test"
+
+# noto'g'ri nomlar (xatolik beradi)
+# 1son = 5
+# mening-ismim = "Vali"
 ```
 
-    Mening ismim Javohir
-    Mening ismim  Javohir
-    
+## Ma'lumot turlari (Data Types)
 
+Python'da har bir qiymatning o'z **turi** bor. Asosiy turlar:
+
+| Tur | Nomi | Misol |
+|---|---|---|
+| `int` | Butun son | `5`, `-12`, `1000` |
+| `float` | Kasr son | `3.14`, `-0.5` |
+| `str` | Matn (string) | `"salom"`, `'Toshkent'` |
+| `bool` | Mantiqiy (True/False) | `True`, `False` |
+| `list` | Ro'yxat | `[1, 2, 3]` |
+| `tuple` | Kortej | `(1, 2, 3)` |
+| `dict` | Lug'at | `{"kalit": "qiymat"}` |
+| `NoneType` | Bo'sh qiymat | `None` |
+
+Turini bilish uchun `type()` funksiyasidan foydalaniladi:
 
 ```python
-first_name="Davron"
-last_name="Bekmatov"
+son = 10
+kasr = 3.14
+matn = "Salom"
+mantiqiy = True
 
-# Bunda bo'sh joysiz chiqadi
-print(first_name+last_name)
-
-# Bunda bo'sh joy bilan chiqadi
-print(first_name+" "+last_name)
+print(type(son))
+print(type(kasr))
+print(type(matn))
+print(type(mantiqiy))
 ```
 
-    DavronBekmatov
-    Davron Bekmatov
-    
+```
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'bool'>
+```
 
-### f-string
-Ikki va undan ortiq o'zgaruvchilar uchun juda qo'l keladi
+## Dinamik tiplash (Dynamic Typing)
 
+Python'da o'zgaruvchining turini oldindan e'lon qilish shart emas — Python buni avtomatik aniqlaydi. Bundan tashqari, bitta o'zgaruvchi umrida turli xil turdagi qiymatlarni qabul qilishi mumkin:
 
 ```python
-name='Azazmat'
-familiya='Sarvarov'
-print(f"Sizning ismingiz {name} va fammiliyangiz {familiya}")
+narsa = 10          # int
+print(type(narsa))
+narsa = "o'n"        # endi str
+print(type(narsa))
+narsa = 10.0         # endi float
+print(type(narsa))
 ```
 
-    Sizning ismingiz Azazmat va fammiliyangiz Sarvarov
-    
+```
+<class 'int'>
+<class 'str'>
+<class 'float'>
+```
 
-Bu usul ayniqsa uzun matnlar uchun kerakli
+Bu C++ yoki Java kabi **statik tiplangan** tillardan farqli xususiyat — u yerda o'zgaruvchi turi e'lon qilingandan keyin o'zgarmaydi.
 
+## Turlarni bir-biriga aylantirish (Type Casting)
+
+Ba'zan bir turdagi ma'lumotni boshqasiga aylantirish kerak bo'ladi. Bu uchun `int()`, `float()`, `str()`, `bool()` funksiyalaridan foydalaniladi.
 
 ```python
-name="Samandar"
-lasat_name="Farhodov"
-print(f"Mening ismim {name} familiyam {last_name} ya'ni {name} {last_name} man")
+son_matn = "25"
+son = int(son_matn)     # matnni songa aylantirish
+print(son + 5)
 ```
 
-    Mening ismim Samandar familiyam Bekmatov ya'ni Samandar Bekmatov man
-    
-
-*Maxsus belgilar*
-Matnga bo'dshliq qo'shish uchun \t yani yani tab tugmasining bo'shliq joyi uchun, yangi qatorga tushirish uchun \n belgisidan foydalaniladi.
-
+```
+30
+```
 
 ```python
-print("Hello World!")
-print("Hello \tWorld!")
-print("Hello \nWorld!")
+son = 10
+matn = str(son)         # sonni matnga aylantirish
+print("Mening yoshim " + matn)
 ```
 
-    Hello World!
-    Hello 	World!
-    Hello 
-    World!
-    
+```
+Mening yoshim 10
+```
 
-### String va metodlar
-Pythonda string ustida amalga oshirish mumkin bo'lgan tayyor amallar to'plami mavjud. Bunday amallar to'plami **metodlar** deb ataladi. 
-
-Metodlarni qo'llash uchun metod nomi matndan so'ng **.metod_nomi()** kabi yoziladi
-
+**Diqqat:** Agar matn ichida son bo'lmasa, `int()` funksiyasi xatolik beradi:
 
 ```python
-name="Javlon"
-last_name="Mavlonov"
-full_name=f"{name} {last_name}"
-print("Oradagi farqlarni ilg'ashga harakat qiling.")
-print(full_name.upper())
-print(full_name.lower())
-print(full_name.title())
-print(full_name.capitalize())
+son = int("yigirma")   # ValueError xatoligi beradi
 ```
 
-    Oradagi farqlarni ilg'ashga harakat qiling.
-    JAVLON MAVLONOV
-    javlon mavlonov
-    Javlon Mavlonov
-    Javlon mavlonov
-    
+## input() funksiyasi va turlar
 
-*strip(), rstrip() va lstrip() metodlari*
-Bu metodlar matnning boshi va oxiridagi bo'sh joylarni olib tashlaydi
-
-
-lstrip() — matn boshidagi bo'shliqni,
-
-rstrip() – matn oxiridagi bo'shliqni,
-
-strip() — matn boshi va oxiridagi bo'shliqlarni olib tashlaydi
-
+`input()` funksiyasi foydalanuvchidan qanday ma'lumot kiritilishidan qat'iy nazar, **har doim `str` (matn) turida** qaytaradi. Shu sababli sonlar bilan ishlash uchun uni albatta aylantirish kerak.
 
 ```python
-fruit="        olma        "
-print(fruit)
-print(fruit.strip())
-print(fruit.lstrip())
-print(fruit.rstrip())
-meva = "     olma     "
-print("Men " + meva.lstrip() + " yaxshi ko'raman")
-print("Men " + meva.rstrip() + " yaxshi ko'raman")
-print("Men " + meva.strip() + " yaxshi ko'raman")
-print("Men " + meva + " yaxshi ko'raman")
+yosh = input("Necha yoshdasiz? ")
+print(type(yosh))          # <class 'str'> — hatto 15 kiritilsa ham!
+
+yosh = int(yosh)
+print(type(yosh))          # endi <class 'int'>
+print(yosh + 5)             # endi matematik amal bajarish mumkin
 ```
 
-            olma        
-    olma
-    olma        
-            olma
-    Men olma      yaxshi ko'raman
-    Men      olma yaxshi ko'raman
-    Men olma yaxshi ko'raman
-    Men      olma      yaxshi ko'raman
-    
+## None turi
 
-#### Input foydalanuvhi bilan munloqot
-Input bizga foydalanuvchidan ma'lumot olish imkoninin beradi 
-
+`None` — Python'da "qiymat yo'q" yoki "bo'sh" degan maxsus tur. U `0` ham, `""` (bo'sh matn) ham emas — bu butunlay alohida tushuncha.
 
 ```python
-name=input("Please enter your name:")
-print("Hello ", name)
+natija = None
+print(natija)
+print(type(natija))
 ```
 
-    Hello  jurabek
-    
+```
+None
+<class 'NoneType'>
+```
 
-Keling endi biroz chiroyliroq ilamiz buni 
+`None` ko'pincha o'zgaruvchini "hali qiymati yo'q" holatda e'lon qilishda yoki funksiya hech narsa qaytarmaganda ishlatiladi.
 
+## Bir qatorda bir nechta o'zgaruvchi
 
 ```python
-name=input("Enter your name:\n>>>")
-print("Hello ", name.title())
+ism, yosh, shahar = "Laylo", 22, "Samarqand"
+print(ism, yosh, shahar)
+
+# barchasiga bitta qiymat
+a = b = c = 0
+print(a, b, c)
 ```
 
-    Hello  Jurabek
-    
+```
+Laylo 22 Samarqand
+0 0 0
+```
 
-**Topshiriqlar**
-🚗 Variant 1: Avtomobil ma'lumotlari (Mashq)
-O'zgaruvchilar yaratish:
-Quyidagi o'zgaruvchilarni yarating va qiymat bering:
+---
 
-model="Chevrolet"
+## 🎯 Mashqlar
 
-rang="Oq"
+🟢 **Oson daraja**
 
-yil="2023"
+1. `ism`, `yosh`, `shahar` nomli o'zgaruvchilar yarating va ularni bitta `print()` qatorida chiqaring.
+2. Ikkita sonni o'zgaruvchilarga yozing va ularning yig'indisini hisoblovchi dastur yozing.
+3. `input()` orqali foydalanuvchi ismini so'rang va "Salom, [ism]!" deb chiqaring.
+4. Har bir asosiy ma'lumot turi (`int`, `float`, `str`, `bool`) uchun bittadan o'zgaruvchi yarating va `type()` orqali turlarini ekranga chiqaring.
+5. Bitta o'zgaruvchiga ketma-ket 3 xil turdagi qiymat bering va har safar uning turini chop eting.
 
-narx="12000"
+🟡 **O'rta daraja**
 
-Konsolga chiqarish:
-Ushbu o'zgaruvchilarni jamlab, quyidagi ko'rinishda chiqaring:
-Chevrolet avtomobili, Rangi oq, 2023-yilda ishlab chiqarilgan, Narxi 12000 dollarni tashkil etadi.
+6. Foydalanuvchidan ikkita son (matn ko'rinishida) kiritishni so'rang, ularni `int()` ga aylantirib, yig'indisi, ayirmasi, ko'paytmasi va bo'linmasini chiqaring.
+7. Foydalanuvchidan tug'ilgan yilini so'rang va joriy yildan ayirib, yoshini hisoblab chiqaruvchi dastur yozing.
+8. Nega `"5" + "5"` natijasi `"55"` bo'ladi-yu, `5 + 5` natijasi `10` bo'ladi? Buni tushuntirib, kod orqali isbotlang.
 
-Foydalanuvchi kiritishi:
-Yuqoridagi 4 ta ma'lumotni foydalanuvchidan input() orqali so'rang va natijani ekranga chiqaring.
-
-Yangi qatorlar:
-Natijani chiqarishda har bir verguldan keyin \n yordamida yangi qatorga o'tkazing.
-
-Metodlar bilan ishlash:
-Barcha ma'lumotlarni f-string orqali avto_info degan o'zgaruvchiga yuklang va unga .upper(), .lower(), .title() va .capitalize() metodlarini qo'llab ko'ring.
-
-🎓 Variant 2: Talaba anketasi (Mashq)
-Ma'lumotlar:
-O'zingiz haqingizda (yoki ixtiyoriy shaxs) quyidagi o'zgaruvchilarni yarating:
-
-ism, familiya, yosh, universitet.
-
-Matn shakllantirish:
-f-string yordamida quyidagicha gap yasang:
-Salom, mening ismim Ism Familiya. Yoshim 20 da. Men Universitet talabasiman.
-
-String manipulyatsiyasi:
-Foydalanuvchi ismini kichik harf bilan kiritsa ham, ekranga chiqarayotganda .title() metodi orqali har doim bosh harf bilan chiqadigan qiling.
-
-📦 Variant 3: Maxsus belgi va Formatlash (Qiyinroq)
-O'zgaruvchilar:
-shahar, davlat, aholi_soni o'zgaruvchilarini yarating.
-
-Belgilar bilan ishlash:
-Quyidagi ko'rinishni hosil qiling (bunda \t — tabulyatsiya/bo'sh joydan foydalaning):
-
-Plaintext
-
-Davlat: O'zbekiston
-    Shahar: Toshkent
-    Aholi: 3 million
-Tozalash (strip):
-Foydalanuvchidan biror so'z so'rang va u so'zning boshidagi va oxiridagi bo'sh joylarni .strip() metodi bilan olib tashlab, keyin uzunligini (len()) o'lchang.
+---
