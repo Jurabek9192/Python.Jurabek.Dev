@@ -1,87 +1,146 @@
-# O'zgaruvchilar
+# PYTHON BILAN TANISHUV
 
-**O'zgaruvchi**-kompyuter xotirasida ma'lum bir qiymatni saqlash uchun ajratilgan joy. Soddaroq qilib tushuntirsak, o'zgaruvchini quti, quti ichidagi narsani esa qiymat deb tasavvur qilish mumkin. Pythonda qiymatlar son, matn, ro'yxat va hokazo ko'rinishida bo'lishi mumkin.
+## Python nima?
 
-![image.jpg](../.gitbook/assets/image.jpg)
+**Python** — 1991-yilda Gvido van Rossum tomonidan yaratilgan, yuqori darajadagi (high-level), umumiy maqsadli dasturlash tili. U o'zining sodda va o'qish uchun qulay sintaksisi bilan mashhur — shu sababli ko'plab boshlang'ich dasturchilar aynan Python bilan o'z yo'lini boshlaydi.
 
-Bular a'lumot turlari va ularning xotiradan egallaydigan joylari ham turli bo'ladi.\
-Quyida ma'lumot turlarining umumiy xotiradan oladigan joylari haqida gaplashamiz.\
-Ma'lumot turi,Hajmi (Bayt),Izoh\
-**int** (0),24 - 28 bayt,Son kattalashgan sari hajm ortadi (chegara yo'q).\
-**float**,24 bayt,O'nlik kasr sonlar uchun standart hajm.\
-**bool**,24 - 28 bayt,True yoki False (aslida 1 va 0 integerlari). **str** (matn),49 - 50 bayt,+1 bayt [(ASCII)](https://www.ascii-code.com/) yoki +2/4 [(Unicode)](https://home.unicode.org/).
+Python bugungi kunda quyidagi sohalarda keng qo'llaniladi:
 
-Ma'lumot turi,Boshlang'ich (bo'sh),Har bir qo'shimcha element uchun
+- **Web dasturlash** — Django, Flask kabi freymvorklar yordamida
+- **Ma'lumotlar tahlili va sun'iy intellekt** — Pandas, NumPy, TensorFlow, PyTorch
+- **Avtomatlashtirish (Automation)** — kundalik ishlarni robotlashtirish, skriptlar yozish
+- **O'yin dasturlash** — Pygame kabi kutubxonalar orqali
+- **Robototexnika** — Arduino, Raspberry Pi bilan integratsiya
 
-_list_ (ro'yxat),56 bayt,+8 bayt (har bir element manzili uchun).\
-_tuple_,40 bayt,+8 bayt (o'zgarmas bo'lgani uchun listdan kichik).\
-_set_ (to'plam),216 bayt,Xesh-jadval ishlatgani uchun katta joy oladi.\
-_dict_ (lug'at),232 bayt,Eng ko'p xotira talab qiladigan tur.\
-_noneType_,16 bayt,Bo'sh qiymat (None).\
-_complex_,32 bayt,Kompleks sonlar (a+bj).
+Python nomi aslida ilon turi emas, balki Gvido van Rossumning sevimli komediya shousi *"Monty Python's Flying Circus"* dan olingan.
+
+## Nega aynan Python?
+
+1. **Sodda sintaksis** — kod inson tiliga yaqin, o'qish va tushunish oson
+2. **Katta jamoat (community)** — muammoga duch kelsangiz, internetda deyarli har doim javob topiladi
+3. **Ko'plab tayyor kutubxonalar** — g'ildirakni qayta ixtiro qilish shart emas
+4. **Ko'p platformali** — Windows, macOS, Linux'da bir xil ishlaydi
+5. **Keng qo'llanilish sohasi** — bitta til bilan veb-sayt ham, sun'iy intellekt modeli ham yozish mumkin
+
+## Python'ni o'rnatish
+
+1. [python.org](https://www.python.org/downloads/) saytiga kiring
+2. O'z operatsion tizimingizga mos versiyani yuklab oling (eng so'nggi barqaror versiya tavsiya etiladi)
+3. O'rnatish paytida **"Add Python to PATH"** katagini albatta belgilang — aks holda terminal orqali Python'ni chaqira olmaysiz
+
+O'rnatishni tekshirish uchun terminal (Windows'da CMD yoki PowerShell) oching va yozing:
+
+```bash
+python --version
+```
+
+```
+Python 3.12.4
+```
+
+Agar versiya raqami chiqsa — demak Python muvaffaqiyatli o'rnatilgan.
+
+## IDE — dasturlash muhiti
+
+Kod yozish uchun matn muharriri (IDE — Integrated Development Environment) kerak bo'ladi. Eng ko'p tavsiya etiladiganlar:
+
+| IDE | Xususiyati |
+|---|---|
+| **VS Code** | Bepul, yengil, ko'plab kengaytmalar bilan — eng ommabop tanlov |
+| **PyCharm** | Python uchun maxsus yaratilgan, professional funksiyalarga boy |
+| **Jupyter Notebook** | Ma'lumotlar tahlili va o'rganish uchun qulay, kod bo'lak-bo'lak ishlaydi |
+
+Ushbu kursda biz **VS Code** dan foydalanamiz.
+
+## Birinchi dastur
+
+Dasturlashni o'rganishning an'anaviy birinchi qadami — ekranga "Salom, Dunyo!" degan matnni chiqarish.
 
 ```python
-print("Assalamu alekum")
+print("Salom, Dunyo!")
 ```
 
 ```
-Assalamu alekum
+Salom, Dunyo!
 ```
+
+Tahlil qilaylik:
+
+- `print()` — Python'ning **funksiyasi** bo'lib, qavs ichidagi narsani ekranga chiqaradi
+- `"Salom, Dunyo!"` — bu matn (string) ma'lumot turi, shuning uchun qo'shtirnoq ichiga olingan
+
+## Kodni ishga tushirish
+
+Kodni ikki xil usulda ishga tushirish mumkin:
+
+**1-usul: Fayl orqali**
+
+`salom.py` nomli fayl yarating, ichiga kodni yozing va terminalda quyidagini bajaring:
+
+```bash
+python salom.py
+```
+
+**2-usul: Interaktiv rejim (interpretator)**
+
+Terminalga shunchaki `python` deb yozib Enter bosing — bu sizni Python'ning interaktiv muhitiga olib kiradi, u yerda har bir qatorni alohida sinab ko'rishingiz mumkin.
+
+## Izohlar (comments)
+
+Kod ichida izoh qoldirish uchun `#` belgisidan foydalaniladi. Izohlar Python tomonidan bajarilmaydi — ular faqat dasturchi uchun tushuntirish maqsadida yoziladi.
 
 ```python
-name="Abdulloh"
-age=25
-print(name)
-print(age)
+# Bu birinchi dasturim
+print("Salom, Dunyo!")  # ekranga salom chiqaradi
 ```
 
-```
-Abdulloh
-25
-```
-
-**O'zgaruvchi-variable** - bunday deyilishiga sabab bu o'zgaradi yani yangi ma'lumot yuklash mumkin.
+Ko'p qatorli izoh uchun uchta qo'shtirnoqdan foydalaniladi:
 
 ```python
-name="Abdulloh"
-print(name)
-name="Davlat"
-print(name)
+"""
+Bu ko'p qatorli izoh.
+Loyiha haqida umumiy ma'lumot yozish uchun qulay.
+"""
+print("Ishladi!")
+```
+
+## Python'ning ishlash mantig'i
+
+Python — **interpretatsiya qilinuvchi (interpreted)** til. Bu shuni anglatadiki, kod C++ yoki Java kabi avval to'liq mashina koduga aylantirilmaydi, balki qator-qator, yuqoridan pastga qarab, darhol bajariladi. Shu sababli xatolik bo'lsa, dastur o'sha qatorgacha ishlaydi va keyin to'xtaydi.
+
+```python
+print("Birinchi qator")
+print("Ikkinchi qator")
+print(1 / 0)  # bu yerda xatolik yuz beradi
+print("Bu qator hech qachon ishlamaydi")
 ```
 
 ```
-Abdulloh
-Davlat
+Birinchi qator
+Ikkinchi qator
+ZeroDivisionError: division by zero
 ```
 
-**Diqqat** o'zgaruvchiga nimadir nom berishda ehtiyot bo'lamiz
+## Xatoliklar bilan tanishuv
 
-O'zgaruvchilarga nom berishda quyidagi qoidalarga amal qiling:
+Dasturlashda xatolik (error) qilishdan qo'rqmang — bu jarayonning tabiiy qismi. Python xatolik yuz berganda sizga qaysi qatorda va nima sababdan xatolik borligini aniq ko'rsatadi. Buni **traceback** deyiladi. Uni o'qishni o'rganish — dasturchilik mahoratining muhim qismi.
 
-O'zgaruvchi nomi harf yoki pastki chiziq (\_) bilan boshlanishi kerak
+---
 
-O'zgaruvchi nomi raqam bilan boshlanishi mumkin emas
+## 🎯 Mashqlar
 
-O'zgaruvchi nomida faqatgina lotin alifbosi harflari (A-z), raqamlar (0-9) va pastki chiziq (\_) qatnashishi mumkin
+🟢 **Oson daraja**
 
-O'zgaruvchi nomida bo'shliq (пробел) bo'lishi mumkin emas
+1. Ekranga o'z ismingiz va familiyangizni chiqaruvchi dastur yozing.
+2. Ekranga 3 qatorlik she'r yoki maqol chiqaring (har bir qator alohida `print()` orqali).
+3. `print()` funksiyasidan foydalanib, ekranda kichik "rasm" chizing (masalan `*` belgilaridan uchburchak).
+4. Dasturingizga kamida 2 ta izoh (comment) qo'shing — birini bir qatorlik, birini ko'p qatorlik qilib.
+5. Terminalda `python --version` va `pip --version` buyruqlarini bajarib, natijalarini yozib qo'ying.
 
-O'zgaruvchi nomida katta-kichik harflar turlicha talqin qilinadi (ism, ISM, va Ism uchta turli o'zgaruvchi)
+🟡 **O'rta daraja**
 
-**Eslatma** o'zgaruvchiga nom berishda kichik harflardan foydalaning agar nom ikki va undan ortiq so'z bo'lsa unda orasida ( ) bo'sh joy qoldirmang (\_) pastki chizidan foydalaning va iloji boricha o'zgaruvchiga tushunarli nom bering adashib ketmasligingiz uchun foydali bu **Diqqat** o'zgaruvchiga bermaslik kerak bo'lgan so'zlar mavjud
+6. Qasddan xatolik keltirib chiqaruvchi kod yozing (masalan noto'g'ri yozilgan funksiya nomi) va chiqqan xatolik xabarini (traceback'ni) tahlil qiling — u sizga nima haqida gapiryapti?
+7. `print()` funksiyasining `sep` va `end` parametrlarini internetdan qidirib toping va ular yordamida natijani turlicha formatlashga urinib ko'ring.
 
-![image.png](../.gitbook/assets/image.png)
+---
 
-"Hello World" matnini yangi o'zgaruvchiga yuklang va print() qiling
-
-Ism va yosh o'zgaruvchilarini yarating va ularni bitta print() da chiqaring.
-
-radius = 5 o'zgaruvchisini yarating va doira yuzini hisoblab (3.14 \* radius\*\*2) natijani chiqaring
-
-xabar deb nomlangan o'zgaruvchiga biron matn yuklang unni chiqaring va yangi ma'lumot yuklab uni ham chiqaring
-
-class deb o'zgaruvchiga ma'lumot yuklab uni chiqarishga harakat qiling
-
-Quyidagi kodni bajaring:
-
-radius = 5 pi = 3.14159 aylana\_yuzi = pi \* radius\*\*2 print("Radiusi" , radius, "ga teng aylananing yuzi=", aylana\_yuzi)
