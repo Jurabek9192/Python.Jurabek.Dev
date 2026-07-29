@@ -5,7 +5,7 @@
 ## Mundarija
 * [PYTHON BILAN TANISHUV](docs/01_python_bilan_tanishuv.md)
 * [O'ZGARUVCHILA MA'LUMOT TURLARI](docs/02_ozgaruvchilar_malumot_turlari.md)
-* [SONLAR MATEMATIK AMALLAR](docs/03_sonlarmatematik_amallar.md)
+* [SONLAR MATEMATIK AMALLAR](docs/03_sonlar_matematik_amallar.md)
 * [MATNLAR STRING](docs/04_matnlar_string.md)
 * [KIRITISH CHIQARISH](docs/05_kiritish_chiqarish.md)
 * [RO'YXATLAR LIST](docs/06_royxatlar.md)
