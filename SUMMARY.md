@@ -8,7 +8,7 @@
 * [SONLAR MATEMATIK AMALLAR](docs/03_sonlar_matematik_amallar.md)
 * [MATNLAR STRING](docs/04_matnlar_string.md)
 * [KIRITISH CHIQARISH](docs/05_kiritish_chiqarish.md)
-* [RO'YXATLAR LIST](docs/06_royxatlar.md)
+* [RO'YXATLAR LIST](docs/06_royxatlar_list.md)
 * [KORTEJLAR TUPLE](docs/07_kortejlar_tuple.md)
 * [LUG'ATLAR DICTIONARY](docs/08_lugatlar_dictionary.md)
 * [TO'PLAMLAR SET](docs/09_toplamlar_set.md)
