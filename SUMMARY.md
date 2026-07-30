@@ -23,7 +23,7 @@
 * [QIYMAT QAYTARISH](docs/17_qiymat_qaytarish.md)
 * [FUNKSIYA VA LIST](docs/18_funksiya_va_royxat.md)
 * [MOSLASHUCHAN FUNKSIYA](docs/19_moslashuvchan_funksiya.md)
-* [MODULLAR](20_modullar.md)
+* [MODULLAR](docs/20_modullar.md)
 * [YAKUNIY LOYIHA](docs/21_lambda_songsoz.md)
 * [SON TOPISH](docs/22_son_topish_oyini.md)
 * [SO'Z TOPISH O'YINI](docs/23_soz_topish_oyini.md)
