@@ -3,7 +3,7 @@
 * [Qisqacha](README.md)
 
 ## Mundarija
-* [MUDARIJA](cods/00_MUNDARIJA.md)
+* [MUDARIJA](docs/00_MUNDARIJA.md)
 * [PYTHON BILAN TANISHUV](docs/01_python_bilan_tanishuv.md)
 * [PRINT_SINTAKSIS_ARIFMETIK](docs/02_print_sintaksis_arifmetik.md)
 * [O'ZGARUVCHILAR](docs/03_ozgaruvchilar.md)
