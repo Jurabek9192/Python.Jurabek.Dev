@@ -27,6 +27,8 @@
 * [YAKUNIY LOYIHA](docs/21_lambda_songsoz.md)
 * [SON TOPISH](docs/22_son_topish_oyini.md)
 * [SO'Z TOPISH O'YINI](docs/23_soz_topish_oyini.md)
+* [JSON BILAN ISHLASH](docs/json_bilan_ishlash.md)
+* [REQUESTS](docs/requests_bilan_ishlash.md)
 * [REGEX](docs/24_regex.md)
 * [YANGI IMKONIYATLAR](docs/25_yangi_imkoniyatlar.md)
 * [TELEGRAM BOT ASOSLARI](docs/26_telegram_bot_asoslari.md)
