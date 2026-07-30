@@ -29,3 +29,7 @@
 * [SO'Z TOPISH O'YINI](docs/23_soz_topish_oyini.md)
 * [REGEX](docs/24_regex.md)
 * [YANGI IMKONIYATLAR](docs/25_yangi_imkoniyatlar.md)
+* [TELEGRAM BOT ASOSLARI](docs/26_telegram_bot_asoslari.md)
+* [TELEGRAM BOT TUGMALAR](docs/27_telegram_bot_klaviaturalar.md)
+* [TELEGRAM BOT FSM](docs/28_telegram_bot_fsm.md)
+* [TELEGRAM BOT YAKUNIY LOYIHA](docs/29_telegram_bot_yakuniy_loyiha.md)
