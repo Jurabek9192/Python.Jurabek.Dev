@@ -181,4 +181,4 @@ Python doimiy rivojlanib boruvchi til. Ushbu kursda siz o'rgangan asoslar (o'zga
 
 Siz 25 ta mavzu, jami **500 ta mashq** orqali Python dasturlash tilining asoslarini — sodda `print()` dan tortib, zamonaviy `match-case` va Template Strings'gacha — puxta o'rgandingiz. Bu — dasturlashning istalgan yo'nalishida (veb, sun'iy intellekt, robototexnika, ma'lumotlar tahlili) ishonchli poydevor.
 
-**Keyingi qadam:** Object-Oriented Programming (OOP), fayllar bilan ishlash va ilg'or Python vositalarini chuqurroq o'rganish uchun, avvalgi 4 kitoblik "Python bo'yicha to'liq kurs"ingizga qayting.
+**Keyingi qadam:** Object-Oriented Programming (OOP)
