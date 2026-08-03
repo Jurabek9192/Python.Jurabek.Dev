@@ -209,4 +209,4 @@ if __name__ == "__main__":
 
 ## 🎉 TELEGRAM BOT BO'LIMI YAKUNLANDI!
 
-Siz endi nafaqat Python asoslarini, balki ularni **real dunyoda ishlaydigan mahsulotga** — to'liq funksional Telegram botga aylantirishni ham bilasiz. Bu ko'nikma sizga o'z g'oyalaringizni tezda amalga oshirish, talabalaringiz uchun foydali vositalar yaratish imkonini beradi.
+Siz endi nafaqat Python asoslarini, balki ularni **real dunyoda ishlaydigan mahsulotga** — to'liq funksional Telegram botga aylantirishni ham bilasiz.
